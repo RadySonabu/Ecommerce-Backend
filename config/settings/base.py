@@ -31,6 +31,8 @@ THIRD_PARTY_APPS = [
 
 CREATED_APPS = [
     "core",
+    'apps.base',
+    'apps.user',
 ]
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + CREATED_APPS
 
@@ -106,6 +108,8 @@ USE_TZ = True
 CORS_ORIGIN_ALLOW_ALL = True
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+AUTH_USER_MODEL = 'user.MyUser'
+
 
 AWS_ACCESS_KEY_ID = 'AKIAV5LWG4U4W76S7CNS'
 AWS_SECRET_ACCESS_KEY = '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'

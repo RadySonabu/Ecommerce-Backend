@@ -31,5 +31,5 @@ DEFAULT_URLS = [
 ]
 
 urlpatterns = [
-    # path("", include("")),
+    path("api/", include("apps.base.urls")),
 ] + DEFAULT_URLS
