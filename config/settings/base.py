@@ -14,12 +14,12 @@ ALLOWED_HOSTS = ["*"]
 
 # Application definition
 DEFAULT_APPS = [
+    "whitenoise.runserver_nostatic",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
-    "whitenoise.runserver_nostatic",
     "django.contrib.staticfiles",
 ]
 THIRD_PARTY_APPS = [
@@ -103,5 +103,19 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-
+CORS_ORIGIN_ALLOW_ALL = True
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+AWS_ACCESS_KEY_ID = 'AKIAV5LWG4U4W76S7CNS'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'random-files-ardy'
+AWS_S3_CUSTOM_DOMAIN = '%s.s3.amazonaws.com' % AWS_STORAGE_BUCKET_NAME
+AWS_S3_OBJECT_PARAMETERS = {
+    'CacheControl': 'max-age=86400',
+}
+AWS_S3_FILE_OVERWRITE = False
+AWS_DEFAULT_ACL = None
+AWS_S3_VERIFY = True
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_S3_SIGNATURE_VERSION = 's3v4'
