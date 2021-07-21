@@ -2,14 +2,27 @@ from .base import *
 
 DEBUG = True
 
-INTERNAL_IPS = [
-    "127.0.0.1",
-]
+# INTERNAL_IPS = [
+#     "127.0.0.1",
+# ]
 
+# DATABASES = {
+#     "default": {
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(os.path.dirname(BASE_DIR), "db.sqlite3"),
+#     }
+# }
 DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(os.path.dirname(BASE_DIR), "db.sqlite3"),
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'OPTIONS': {
+            'options': '-c search_path=trashtok-api'
+        },
+        'NAME': 'vzijcxwv',
+        'USER': 'vzijcxwv',
+        'HOST': 'satao.db.elephantsql.com',
+        'PASSWORD': 'cpoctX16shRe_c6U6L56W8OS-SlxXzPU',
+        'PORT': '5432',
     }
 }
 

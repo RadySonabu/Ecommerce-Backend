@@ -1,0 +1,11 @@
+{
+	"dev": {
+		"aws_region": "us-west-2",
+		"django_settings": "config.settings",
+		"profile_name": "default",
+		"project_name": "trashtok-api",
+		"runtime": "python3.8",
+		"s3_bucket": "lambda-ardy",
+		"manage_roles": false
+	}
+}
