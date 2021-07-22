@@ -163,4 +163,5 @@ app/env/*
 app/db.sqlite3
 config/settings/.env
 config/settings/.env/*
+**/.env
 # End of https://www.toptal.com/developers/gitignore/api/django
