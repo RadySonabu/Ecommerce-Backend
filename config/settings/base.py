@@ -33,6 +33,7 @@ CREATED_APPS = [
     "core",
     'apps.base',
     'apps.user',
+    'apps.products',
 ]
 INSTALLED_APPS = DEFAULT_APPS + THIRD_PARTY_APPS + CREATED_APPS
 
@@ -106,8 +107,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 CORS_ORIGIN_ALLOW_ALL = True
-STATIC_URL = "/static/"
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+# STATIC_URL = "/static/"
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 AUTH_USER_MODEL = 'user.MyUser'
 
 
